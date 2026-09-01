@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHOP.CO — Find Clothes That Matches Your Style</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🛍️</text></svg>">
+</head>
+<body>
+
+<!-- ============ TOP BANNER ============ -->
+<div class="topbar" id="topbar">
+  <p>Sign up and get 20% off to your first order. <a href="#" data-open="signup">Sign Up Now</a></p>
+  <button class="topbar__close" aria-label="Закрыть баннер">&times;</button>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#" class="logo">SHOP.CO</a>
+
+    <nav class="nav" id="nav">
+      <div class="nav__mobile-head">
+        <span class="logo">SHOP.CO</span>
+        <button class="nav__close" id="navClose" aria-label="Закрыть меню">&times;</button>
+      </div>
+      <ul class="nav__list">
+        <li class="nav__item has-drop">
+          <button class="nav__link" aria-expanded="false">Shop
+            <svg width="12" height="8" viewBox="0 0 12 8"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          </button>
+          <div class="dropdown">
+            <a href="#" data-filter="t-shirts">T-shirts</a>
+            <a href="#" data-filter="shirts">Shirts</a>
+            <a href="#" data-filter="jeans">Jeans</a>
+            <a href="#" data-filter="shorts">Shorts</a>
+            <a href="#" data-filter="all">All products</a>
+          </div>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="#" data-filter="sale">On Sale</a></li>
+        <li class="nav__item"><a class="nav__link" href="#new-arrivals">New Arrivals</a></li>
+        <li class="nav__item"><a class="nav__link" href="#brands">Brands</a></li>
+      </ul>
+      <form class="search search--mobile" role="search" data-search>
+        <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input type="search" placeholder="Search for products..." aria-label="Поиск" autocomplete="off">
+        <div class="search__results" hidden></div>
+      </form>
+    </nav>
+
+    <form class="search search--desktop" role="search" data-search>
+      <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" placeholder="Search for products..." aria-label="Поиск товаров" autocomplete="off">
+      <div class="search__results" hidden></div>
+    </form>
+
+    <div class="header__actions">
+      <button class="icon-btn search-toggle" id="searchToggle" aria-label="Поиск">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="cartBtn" aria-label="Корзина">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 5h2.2l2 11.2a2 2 0 002 1.6h8.1a2 2 0 002-1.55L21 8H6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20.5" r="1.4" fill="currentColor"/><circle cx="17.5" cy="20.5" r="1.4" fill="currentColor"/></svg>
+        <span class="badge" id="cartCount" hidden>0</span>
+      </button>
+      <button class="icon-btn" id="accountBtn" aria-label="Аккаунт">
+        <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="8.5" r="3.7" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4.5 20a7.5 7.5 0 0115 0" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <h1>FIND CLOTHES<br>THAT MATCHES<br>YOUR STYLE</h1>
+      <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+      <button class="btn btn--dark btn--lg" data-scroll="#new-arrivals">Shop Now</button>
+      <dl class="stats">
+        <div class="stat"><dt data-count="200">0</dt><dd>International Brands</dd></div>
+        <div class="stat"><dt data-count="2000">0</dt><dd>High-Quality Products</dd></div>
+        <div class="stat"><dt data-count="30000">0</dt><dd>Happy Customers</dd></div>
+      </dl>
+    </div>
+    <div class="hero__media">
+      <img src="img/hero.jpg" alt="Модели в одежде SHOP.CO" width="1240" height="1180" fetchpriority="high">
+      <span class="star star--1" aria-hidden="true"></span>
+      <span class="star star--2" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRANDS ============ -->
+<section class="brands" id="brands">
+  <div class="container brands__inner">
+    <span>VERSACE</span><span>ZARA</span><span>GUCCI</span><span>PRADA</span><span>Calvin Klein</span>
+  </div>
+</section>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section class="section" id="new-arrivals">
+  <div class="container">
+    <h2 class="section__title">NEW ARRIVALS</h2>
+    <div class="grid" id="gridNew"></div>
+    <div class="section__more"><button class="btn btn--ghost" data-more="new">View All</button></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============ TOP SELLING ============ -->
+<section class="section" id="top-selling">
+  <div class="container">
+    <h2 class="section__title">TOP SELLING</h2>
+    <div class="grid" id="gridTop"></div>
+    <div class="section__more"><button class="btn btn--ghost" data-more="top">View All</button></div>
+  </div>
+</section>
+
+<!-- ============ DRESS STYLE ============ -->
+<section class="section" id="dress-style">
+  <div class="container">
+    <div class="styles">
+      <h2 class="section__title">BROWSE BY DRESS STYLE</h2>
+      <div class="styles__grid">
+        <button class="style-card style-card--sm" data-filter="casual"><span>Casual</span><img src="img/style-casual.png" alt="Casual" loading="lazy"></button>
+        <button class="style-card style-card--lg" data-filter="formal"><span>Formal</span><img src="img/style-formal.png" alt="Formal" loading="lazy"></button>
+        <button class="style-card style-card--lg" data-filter="party"><span>Party</span><img src="img/style-party.png" alt="Party" loading="lazy"></button>
+        <button class="style-card style-card--sm" data-filter="gym"><span>Gym</span><img src="img/style-gym.png" alt="Gym" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="reviews__head">
+      <h2 class="section__title section__title--left">OUR HAPPY CUSTOMERS</h2>
+      <div class="reviews__nav">
+        <button class="arrow" id="revPrev" aria-label="Предыдущий отзыв">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="arrow" id="revNext" aria-label="Следующий отзыв">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="reviews__viewport" id="revViewport">
+    <div class="reviews__track" id="revTrack"></div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="container">
+  <div class="newsletter">
+    <h2>STAY UPTO DATE ABOUT<br>OUR LATEST OFFERS</h2>
+    <form class="newsletter__form" id="newsForm" novalidate>
+      <label class="field">
+        <svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <input type="email" id="newsEmail" placeholder="Enter your email address" aria-label="Email">
+      </label>
+      <button class="btn btn--light" type="submit">Subscribe to Newsletter</button>
+      <p class="field__error" id="newsError" hidden>Введите корректный e-mail</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#" class="logo">SHOP.CO</a>
+      <p>We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+      <div class="socials">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M21 5.6a7 7 0 01-2 .6 3.5 3.5 0 001.5-1.9 7 7 0 01-2.2.9 3.5 3.5 0 00-6 3.2A9.9 9.9 0 013.1 4.7a3.5 3.5 0 001.1 4.7 3.4 3.4 0 01-1.6-.4 3.5 3.5 0 002.8 3.5 3.5 3.5 0 01-1.6.1 3.5 3.5 0 003.3 2.4A7 7 0 013 16.6a9.9 9.9 0 005.4 1.6c6.4 0 10-5.4 9.8-10.2A7 7 0 0021 5.6z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.7v8z" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="16" height="16"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2a10 10 0 00-3.16 19.5c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z" fill="currentColor"/></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__cols">
+      <div class="footer__col"><h3>COMPANY</h3><ul><li><a href="#">About</a></li><li><a href="#">Features</a></li><li><a href="#">Works</a></li><li><a href="#">Career</a></li></ul></div>
+      <div class="footer__col"><h3>HELP</h3><ul><li><a href="#">Customer Support</a></li><li><a href="#">Delivery Details</a></li><li><a href="#">Terms &amp; Conditions</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div class="footer__col"><h3>FAQ</h3><ul><li><a href="#">Account</a></li><li><a href="#">Manage Deliveries</a></li><li><a href="#">Orders</a></li><li><a href="#">Payments</a></li></ul></div>
+      <div class="footer__col"><h3>RESOURCES</h3><ul><li><a href="#">Free eBooks</a></li><li><a href="#">Development Tutorial</a></li><li><a href="#">How to - Blog</a></li><li><a href="#">Youtube Playlist</a></li></ul></div>
+    </nav>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>Shop.co © 2000-2026, All Rights Reserved</p>
+    <div class="pay">
+      <span class="pay__card">VISA</span>
+      <span class="pay__card">MC</span>
+      <span class="pay__card">PayPal</span>
+      <span class="pay__card">Apple Pay</span>
+      <span class="pay__card">G Pay</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart" id="cart" aria-hidden="true" aria-label="Корзина">
+  <div class="cart__head">
+    <h2>Корзина</h2>
+    <button class="cart__close" id="cartClose" aria-label="Закрыть">&times;</button>
+  </div>
+  <div class="cart__body" id="cartBody"></div>
+  <div class="cart__foot">
+    <div class="cart__row"><span>Товаров</span><strong id="cartQty">0</strong></div>
+    <div class="cart__row cart__row--total"><span>Итого</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn btn--dark btn--block" id="checkout">Оформить заказ</button>
+  </div>
+</aside>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog">
+  <div class="modal__box" id="modalBox"></div>
+</div>
+
+<div class="toasts" id="toasts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
